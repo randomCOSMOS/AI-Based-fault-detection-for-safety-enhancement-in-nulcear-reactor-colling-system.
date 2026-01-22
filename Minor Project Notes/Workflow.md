@@ -138,7 +138,7 @@ Diagnosis metrics:
 
 Explain each alarm:
 
-- SHAP feature contribution
+- SHAP (SHapley Additive exPlanations) feature contribution
 - residual reasoning: “which sensor mismatch caused alarm”
 
 **Primary output recorded:**  
