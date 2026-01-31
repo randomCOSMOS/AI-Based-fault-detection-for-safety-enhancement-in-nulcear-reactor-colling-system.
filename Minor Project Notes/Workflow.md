@@ -1,26 +1,23 @@
-## **Phase 0 — Problem Definition (Nuclear Safety Context)**
+### **Phase 0 — Problem Definition (Nuclear Safety Context)**
 
 1. Select coolant-loop instrumentation variables: **T(t), P(t), Flow(t), Pump speed, Valve position**
 2. Define goal: **detect & diagnose sensor faults early** to prevent unsafe control actions.
 
 **Gap solved (paper):** Nuclear systems require reliable early fault detection in complex coupled instrumentation.
 
----
-
 ## **Phase 1 — Multi-source Data Generation (Digital Twin + Benchmark Strategy)**
 
-### **1A) [[ODE Simulation|Physics Digital Twin Dataset (ODE simulation)]]**
+### ** [[ODE Simulation|Physics Digital Twin Dataset (ODE simulation)]]**
 
 - Generate physics-consistent sensor time-series (energy/mass balance).
 - Add realistic disturbances & measurement noise.
 
-### **1B) [[Dataset Generation using Simulink (Cooling Loop Model)|High-fidelity Digital Twin Dataset (Simulink + fault injection)]]**
+### ** [[Dataset Generation using Simulink (Cooling Loop Model)|High-fidelity Digital Twin Dataset (Simulink + fault injection)]]**
 
 - Simulink cooling-loop generates **true** sensor values.
 - Inject sensor faults: drift/bias/stuck/noise/dropout.
 - Preserve **ground truth vs measured sensor**.
-### **1C) [[Benchmark Dataset - Tennessee Eastman Process (TEP)|Benchmark Dataset (TEP)**]]
-
+### **1[[Benchmark Dataset - Tennessee Eastman Process (TEP)|Benchmark Dataset (TEP)**]]
 - Use TEP as standard FDD benchmark for generalization validation.
 
 **Gap solved (paper): dataset scarcity / limited labeled nuclear fault data**  
@@ -36,8 +33,6 @@
 **Main recorded outputs here:**  
 number of scenarios, fault cases per class, normal/fault windows.
 
----
-
 ## **Phase 3 — Preprocessing & Time-series Modelling Setup**
 - Cleaning, scaling, missing handling
 - **Windowing** into sequences (sliding windows)
@@ -49,7 +44,6 @@ number of scenarios, fault cases per class, normal/fault windows.
 → multi-scenario simulation + standardization prepares robust training distribution.
 
 ## **Phase 4 — Virtual Sensor Modelling (Core AI Model)**
-
 Train **virtual sensor (soft sensor)** to estimate critical measurement:
 
 - Models: **GRU/LSTM / XGBoost regression**
@@ -131,8 +125,6 @@ Diagnosis metrics:
 - Safe/unsafe decision threshold” behavior
 
 **Gap solved (paper): AI should estimate severity/impact, not just detect fault**
-
----
 
 ## **Phase 9 — Explainability (XAI)**
 

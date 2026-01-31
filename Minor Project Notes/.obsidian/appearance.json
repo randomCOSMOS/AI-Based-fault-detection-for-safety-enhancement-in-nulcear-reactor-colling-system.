@@ -1,1 +1,9 @@
-{}
+{
+  "theme": "obsidian",
+  "accentColor": "#0097f5",
+  "cssTheme": "Prism",
+  "textFontFamily": "Karla",
+  "baseFontSize": 16,
+  "interfaceFontFamily": "",
+  "nativeMenus": false
+}

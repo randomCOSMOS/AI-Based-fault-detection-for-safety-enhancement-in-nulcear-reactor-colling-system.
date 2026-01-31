@@ -5,10 +5,10 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
+  "collapse-color-groups": true,
   "colorGroups": [
     {
-      "query": "path:\"Data Explained\"  ",
+      "query": "path:\"Phase 1 - Data Generation\"  ",
       "color": {
         "a": 1,
         "rgb": 14701138
@@ -18,7 +18,7 @@
       "query": "path:\"Misc Info\"  ",
       "color": {
         "a": 1,
-        "rgb": 3552822
+        "rgb": 14725458
       }
     }
   ],
