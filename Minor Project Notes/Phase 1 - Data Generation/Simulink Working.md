@@ -16,6 +16,10 @@
 | 60+     | Bias + Drift |
 | 120+    | Stuck At     |
 | 140-150 | Dropout      |
+## Bias
+- +0.05 at 60 secs
+## Drift
+- +0.02 slope
 ## Stuck Values
 - RPM: 2500
 - F: 5
